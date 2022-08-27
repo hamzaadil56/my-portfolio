@@ -1,12 +1,22 @@
 import React from "react";
 import "./About.css";
 import DownloadIcon from "@mui/icons-material/Download";
+import { Typography } from "@mui/material";
+
 
 const About = () => {
   return (
     <div className="container about-container">
       <section>
-        <h2>About Me</h2>
+      <Typography
+          style={{ color: "white", textAlign: "center",margin:"2rem auto" }}
+          variant="h3"
+          component="h3"
+          fontWeight= "500"
+          
+        >
+          About Me
+        </Typography>
         <article>
           My name is Muhammad Hamza and I'm a self taught programmer. I like to
           build full stack web applications using MERN and also passionate about

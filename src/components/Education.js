@@ -1,11 +1,22 @@
 import React from "react";
 import "./Education.css";
 import "../index.css";
+import { Typography } from "@mui/material";
+
+
 const Education = () => {
   return (
     <div className="container education-container">
       <section>
-        <h2>Education</h2>
+      <Typography
+          style={{ color: "white", textAlign: "center",margin:"2rem auto" }}
+          variant="h3"
+          component="h3"
+          fontWeight= "500"
+          
+        >
+          Education
+        </Typography>
       </section>
       <section className="section2">
         <div>
