@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import "./Hero.css";
+import "./Styles.css";
 import { particlesConfig } from "./config/particles-config";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";

@@ -1,19 +1,18 @@
 import React from "react";
-import "./About.css";
+// import "./About.css";
+import "./Styles.css";
 import DownloadIcon from "@mui/icons-material/Download";
 import { Typography } from "@mui/material";
-
 
 const About = () => {
   return (
     <div className="container about-container">
       <section>
-      <Typography
-          style={{ color: "white", textAlign: "center",margin:"2rem auto" }}
+        <Typography
+          style={{ color: "white", textAlign: "center", margin: "2rem auto" }}
           variant="h3"
           component="h3"
-          fontWeight= "500"
-          
+          fontWeight="500"
         >
           About Me
         </Typography>
