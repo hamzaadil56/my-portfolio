@@ -6,11 +6,10 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import "swiper/css";
+
 
 const Projects = () => {
-  const swiper = useSwiper();
+  
   return (
     <div className="container projects-container">
       <Typography
