@@ -53,66 +53,27 @@ const Skills = () => {
 
   return (
     <>
-      <div id="skills" className="container skills-container">
-        <Typography
-          style={{ color: "white", textAlign: "center", margin: "2rem auto" }}
-          variant="h3"
-          component="h3"
-          fontWeight="500"
-        >
-          Skills
-        </Typography>
-        {skills.map((item, index) => (
-          <section data-aos="flip-up" key={index} className="skills-box-main">
-            <div className="box">
-              <Typography
-                variant="h5"
-                component={"h5"}
-                style={{ color: "white", margin: "auto 1rem" }}
-              >
+      <div id="skills" className="container ">
+        <div>
+          <Typography
+            style={{ color: "white", textAlign: "center", margin: "2rem auto" }}
+            variant="h3"
+            component="h3"
+            fontWeight="500"
+          >
+            Skills
+          </Typography>
+        </div>
+        <div className=" skills-container">
+          {skills.map((item, index) => (
+            <div className="skill-box-main">
+              <img src={item.image} alt="skill" />
+              <Typography style={{ color: "white" }} variant="h4">
                 {item.skill}
               </Typography>
             </div>
-            <div className="skills-logo box-sk">
-              <img alt="skill" width={"45px"} height="45px" src={item.image} />
-            </div>
-            <Box className="skills-filler">
-              <Box
-                className="filler-box"
-                style={
-                  item.skill === "React JS"
-                    ? { backgroundColor: "aqua", width: "90%", height: "4vh" }
-                    : null || item.skill === "Redux"
-                    ? { backgroundColor: "purple", width: "80%", height: "4vh" }
-                    : null || item.skill === "Firebase"
-                    ? { backgroundColor: "orange", width: "70%", height: "4vh" }
-                    : null || item.skill === "Material UI"
-                    ? { backgroundColor: "blue", width: "75%", height: "4vh" }
-                    : null || item.skill === "Node JS"
-                    ? {
-                        backgroundColor: "yellowgreen",
-                        width: "80%",
-                        height: "4vh",
-                      }
-                    : null || item.skill === "Express JS"
-                    ? { backgroundColor: "yellow", width: "80%", height: "4vh" }
-                    : null || item.skill === "Mongo DB"
-                    ? { backgroundColor: "green", width: "70%", height: "4vh" }
-                    : null
-                }
-              ></Box>
-            </Box>
-            <div className="percent box-sk">
-              <Typography
-                variant="h5"
-                component={"h5"}
-                style={{ color: "white" }}
-              >
-                {item.value}%
-              </Typography>
-            </div>
-          </section>
-        ))}
+          ))}
+        </div>
       </div>
     </>
   );
