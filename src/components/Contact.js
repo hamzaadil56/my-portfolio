@@ -31,7 +31,7 @@ const CssTextField = styled(TextField)({
 
 const Contact = () => {
   return (
-    <div className="container">
+    <div className="container contact-container">
       <Typography
         style={{
           color: "white",
