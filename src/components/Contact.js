@@ -3,7 +3,11 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import "./Styles.css";
 import { styled } from "@mui/material/styles";
-import InputLabel from "@mui/material/InputLabel";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import Stack from "@mui/material/Stack";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
@@ -28,10 +32,44 @@ const CssTextField = styled(TextField)({
     },
   },
 });
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const Contact = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "contact_service",
+        "contact_form",
+        form.current,
+        "user_uEbWw8WwOMXOG0uapz3pu"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setOpen(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
-    <div className="container contact-container">
+    <div id="contact" className="container contact-container">
       <Typography
         style={{
           color: "white",
@@ -43,13 +81,12 @@ const Contact = () => {
         Contact Me
       </Typography>
       <section>
-        <form action="">
-          <Typography variant="h6" style={{ color: "white" }}>
+        <form ref={form} onSubmit={sendEmail}>
+          <Typography variant="h5" style={{ color: "white" }}>
             Name
           </Typography>
           <CssTextField
-            label="Name"
-            name="name"
+            name="user_name"
             required
             id="custom-css-outlined-input"
             inputProps={{
@@ -57,31 +94,40 @@ const Contact = () => {
             }}
           />
 
-          <Typography variant="h6" style={{ color: "white" }}>
+          <Typography variant="h5" style={{ color: "white" }}>
             Email
           </Typography>
           <CssTextField
-            label="Email"
             id="outlined-email-input"
             required
+            name="user_email"
             type={"email"}
             inputProps={{ style: { color: "white" } }}
           />
-          <Typography variant="h6" style={{ color: "white" }}>
+          <Typography variant="h5" style={{ color: "white" }}>
             Message
           </Typography>
           <CssTextField
             id="outlined-multiline-static"
-            label="Message"
             multiline
+            name="message"
             rows={4}
             inputProps={{ style: { color: "white", margin: "1rem 0" } }}
           />
-          <div>
+          <Stack spacing={2} sx={{ width: "100%" }}>
             <button className="btn submit-btn" type="submit">
               Submit
             </button>
-          </div>
+            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+              <Alert
+                onClose={handleClose}
+                severity="success"
+                sx={{ width: "100%" }}
+              >
+                Your Message has been sent{" "}
+              </Alert>
+            </Snackbar>
+          </Stack>
         </form>
       </section>
     </div>

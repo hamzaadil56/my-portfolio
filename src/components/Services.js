@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect } from "react";
-import Card from "@mui/material/Card";
 import "./Styles.css";
 
 import AOS from "aos";
@@ -12,7 +11,7 @@ const Services = () => {
     AOS.init({ duration: 1000 });
   }, []);
   return (
-    <div className="container services-container">
+    <div id="services" className="container services-container">
       <div data-aos="fade-in">
         <Typography
           style={{ color: "white", fontWeight: "500", textAlign: "center" }}
@@ -24,7 +23,7 @@ const Services = () => {
       </div>
       <section>
         <div data-aos="zoom-out" className="service-card">
-          <Typography style={{ fontWeight: "500" }} variant="h6">
+          <Typography style={{ fontWeight: "500" }} variant="h5">
             Web Development
           </Typography>
           <div>
@@ -37,7 +36,7 @@ const Services = () => {
           </div>
         </div>
         <div data-aos="zoom-out" className="service-card">
-          <Typography style={{ fontWeight: "500" }} variant="h6">
+          <Typography style={{ fontWeight: "500" }} variant="h5">
             Mobile App Development
           </Typography>
           <div>
@@ -51,7 +50,7 @@ const Services = () => {
         </div>
 
         <div data-aos="zoom-out" className="service-card">
-          <Typography style={{ fontWeight: "500" }} variant="h6">
+          <Typography style={{ fontWeight: "500" }} variant="h5">
             Debuggiing
           </Typography>
           <div>

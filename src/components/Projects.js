@@ -4,17 +4,15 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
-
-
+import { CardActionArea } from "@mui/material";
 
 const Projects = () => {
-  
   return (
-    <div className="container projects-container">
+    <div id="projects" className="container projects-container">
       <Typography
         style={{ color: "white", textAlign: "center", margin: "3rem 0" }}
         variant="h3"
+        component={"h3"}
       >
         Projects
       </Typography>
@@ -33,7 +31,12 @@ const Projects = () => {
                   alt="green iguana"
                 />
                 <CardContent style={{ height: "100% !important" }}>
-                  <Typography gutterBottom variant="h5" component="div">
+                  <Typography
+                    style={{ fontWeight: "500" }}
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                  >
                     Mern Stack Ecommerce App
                   </Typography>
                   <Typography variant="body2" color="grey">
@@ -59,7 +62,12 @@ const Projects = () => {
                   alt="green iguana"
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
+                  <Typography
+                    style={{ fontWeight: "500" }}
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                  >
                     React-Redux-Firebase Ecommerce App
                   </Typography>
                   <Typography variant="body2" color="grey">
@@ -85,7 +93,12 @@ const Projects = () => {
                   alt="green iguana"
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
+                  <Typography
+                    style={{ fontWeight: "500" }}
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                  >
                     Restaurant Landing Page
                   </Typography>
                   <Typography variant="body2" color="grey">
@@ -110,7 +123,12 @@ const Projects = () => {
                   alt="green iguana"
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
+                  <Typography
+                    style={{ fontWeight: "500" }}
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                  >
                     Manage Landing Page
                   </Typography>
                   <Typography variant="body2" color="grey">
@@ -133,7 +151,12 @@ const Projects = () => {
                   alt="green iguana"
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
+                  <Typography
+                    style={{ fontWeight: "500" }}
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                  >
                     Stop Watch
                   </Typography>
                   <Typography variant="body2" color="grey">
@@ -158,8 +181,13 @@ const Projects = () => {
                   alt="green iguana"
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Stop Watch
+                  <Typography
+                    style={{ fontWeight: "500" }}
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                  >
+                    Quiz App
                   </Typography>
                   <Typography variant="body2" color="grey">
                     Built a quiz application using HTML, CSS and Javascript

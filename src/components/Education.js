@@ -7,7 +7,7 @@ import { Typography } from "@mui/material";
 
 const Education = () => {
   return (
-    <div className="container education-container">
+    <div id="education" className="container education-container">
       <section>
         <Typography
           style={{ color: "white", textAlign: "center", margin: "2rem auto" }}
@@ -20,23 +20,53 @@ const Education = () => {
       </section>
       <section className="section2">
         <div>
-          <h3>
+          <Typography
+            style={{ fontWeight: "500" }}
+            variant="h5"
+            component={"h5"}
+          >
             Presidential Initiative For Artificial Intelligence And Computing
             (PIAIC)
-          </h3>
-          <p>Specialist in Blockchain Development • Expected June 2023</p>
+          </Typography>
+          <Typography variant="p" component={"p"}>
+            Specialist in Blockchain Development • Expected June 2023
+          </Typography>
         </div>
         <div>
-          <h3>Coursera</h3>
-          <p>Certificate in MERN Stack Development • 2022</p>
+          <Typography
+            style={{ fontWeight: "500" }}
+            variant="h5"
+            component={"h5"}
+          >
+            Coursera
+          </Typography>
+          <Typography variant="p" component={"p"}>
+            Certificate in MERN Stack Development • 2022
+          </Typography>
         </div>
         <div>
-          <h3>Udemy</h3>
-          <p>Certificate in React Native Development • August 2022</p>
+          <Typography
+            style={{ fontWeight: "500" }}
+            variant="h5"
+            component={"h5"}
+          >
+            Udemy
+          </Typography>
+          <Typography variant="p" component={"p"}>
+            Certificate in React Native Development • August 2022
+          </Typography>
         </div>
         <div>
-          <h3>NED University of Engineering and Technology</h3>
-          <p>Bachelors in Chemical Engineering •August 2023</p>
+          <Typography
+            style={{ fontWeight: "500" }}
+            variant="h5"
+            component={"h5"}
+          >
+            NED University of Engineering and Technology
+          </Typography>
+          <Typography variant="p" component={"p"}>
+            Bachelors in Chemical Engineering •August 2023
+          </Typography>
         </div>
       </section>
     </div>

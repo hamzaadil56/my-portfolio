@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Box } from "@mui/material";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Styles.css";
@@ -53,7 +53,7 @@ const Skills = () => {
 
   return (
     <>
-      <div className="container skills-container">
+      <div id="skills" className="container skills-container">
         <Typography
           style={{ color: "white", textAlign: "center", margin: "2rem auto" }}
           variant="h3"
@@ -74,7 +74,7 @@ const Skills = () => {
               </Typography>
             </div>
             <div className="skills-logo box-sk">
-              <img width={"45px"} height="45px" src={item.image} />
+              <img alt="skill" width={"45px"} height="45px" src={item.image} />
             </div>
             <Box className="skills-filler">
               <Box

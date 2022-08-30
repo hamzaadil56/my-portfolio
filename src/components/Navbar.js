@@ -52,33 +52,37 @@ export default function TemporaryDrawer() {
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
-      <div className="logo-container">
-        <h4>Muhammad Hamza</h4>
-        <img
-          src="./images/profile-pic(1).png"
-          width="45px"
-          height="45px"
-          alt=""
-        />
-      </div>
+      <a className="link" href="#hero">
+        <div className="logo-container">
+          <h4>Muhammad Hamza</h4>
+          <img
+            src="./images/profile-pic(1).png"
+            width="45px"
+            height="45px"
+            alt=""
+          />
+        </div>
+      </a>
 
       <List>
         {links.map((item, index) => (
-          <ListItem key={index} disablePadding>
-            <ListItemButton>
-              <ListItemIcon className="list-item-icon">
-                {Object.values(item)[0]}
-              </ListItemIcon>
-              <ListItemText primary={capitalize(Object.keys(item)[0])} />
-            </ListItemButton>
-          </ListItem>
+          <a className="link" href={`#${Object.keys(item)[0]}`}>
+            <ListItem key={index} disablePadding>
+              <ListItemButton>
+                <ListItemIcon className="list-item-icon">
+                  {Object.values(item)[0]}
+                </ListItemIcon>
+                <ListItemText primary={capitalize(Object.keys(item)[0])} />
+              </ListItemButton>
+            </ListItem>
+          </a>
         ))}
       </List>
     </Box>
   );
 
   return (
-    <div>
+    <div className="menu-container">
       <React.Fragment>
         <Button className="menu-btn" onClick={toggleDrawer(true)}>
           <MenuIcon

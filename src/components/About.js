@@ -6,7 +6,7 @@ import { Typography } from "@mui/material";
 
 const About = () => {
   return (
-    <>
+    <div id="about">
       <Typography
         style={{ color: "white", textAlign: "center", margin: "2rem auto" }}
         variant="h3"
@@ -16,19 +16,28 @@ const About = () => {
         About Me
       </Typography>
       <div className="container about-container">
-        <section>
+        <section data-aos="fade-in">
           <article>
-            My name is Muhammad Hamza and I'm a self taught programmer. I like
-            to build full stack web applications using MERN and also passionate
-            about developing mobile apps using React Native. I've a valuable
-            experience in web and mobile app development and love to work with
-            clients and show my expertise in it.
+            <Typography variant="p" component="p">
+              My name is Muhammad Hamza and I'm a self taught programmer.
+              Currently I am pursuing a bachelor's degree in Chemical
+              Engineering at NED University of Engineering and Technology. I am
+              passionate about programming and I like to build full stack web
+              applications using MERN Stack and also passionate about developing
+              mobile apps using React Native. I've a valuable experience in web
+              and mobile app development and love to work with clients and show
+              my expertise in it.
+            </Typography>
           </article>
           <div>
-            <button className="btn download-btn">
+            <a
+              href="./images/Hamza Developer.pdf"
+              download
+              className="btn download-btn"
+            >
               <DownloadIcon style={{ color: "white" }} />
               Download Resume
-            </button>
+            </a>
           </div>
         </section>
         <section>
@@ -41,7 +50,7 @@ const About = () => {
           />
         </section>
       </div>
-    </>
+    </div>
   );
 };
 
