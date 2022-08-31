@@ -51,13 +51,13 @@ const Services = () => {
 
         <div data-aos="zoom-out" className="service-card">
           <Typography style={{ fontWeight: "500" }} variant="h5">
-            Debugging
+            Web Designing
           </Typography>
           <div>
             <img
               width="100%"
               height="100%"
-              src="./images/debugging.gif"
+              src="./images/web-designing.gif"
               alt="web_development"
             />
           </div>

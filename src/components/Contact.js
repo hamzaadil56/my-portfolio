@@ -80,6 +80,7 @@ const Contact = () => {
       >
         Contact Me
       </Typography>
+
       <form ref={form} onSubmit={sendEmail}>
         <Typography variant="h5" style={{ color: "white" }}>
           Name

@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box } from "@mui/material";
+import { Typography } from "@mui/material";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -57,31 +57,26 @@ const Skills = () => {
   }, []);
 
   return (
-    <>
-      <div id="skills" className="container ">
-        <Typography
-          style={{
-            color: "white",
-            textAlign: "center",
-          }}
-          variant="h3"
-          component="h3"
-          fontWeight="500"
-        >
-          Skills
-        </Typography>
-        <div className="skills-container">
-          {skills.map((item, index) => (
-            <div className="skill-box-main">
-              <img src={item.image} alt="skill" />
-              <Typography style={{ color: "white" }} variant="h4">
-                {item.skill}
-              </Typography>
-            </div>
-          ))}
-        </div>
+    <div>
+      <Typography
+        style={{ color: "white", textAlign: "center", margin: "2rem auto" }}
+        variant="h3"
+        component="h3"
+        fontWeight="500"
+      >
+        Skills
+      </Typography>
+      <div id="skills" className="container skills-container">
+        {skills.map((item, index) => (
+          <div key={index} className="skill-box">
+            <img src={item.image} alt="" />
+            <Typography variant="h4" color={"white"}>
+              {item.skill}
+            </Typography>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 

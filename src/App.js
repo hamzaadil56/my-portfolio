@@ -1,6 +1,5 @@
 import "./App.css";
 import About from "./components/About";
-import Education from "./components/Education";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Skills from "./components/Skills";
@@ -14,10 +13,9 @@ function App() {
       <Hero />
       <div className="container2">
         <About />
-        <Education />
         <Skills />
-        <Services />
         <Projects />
+        <Services />
         <Contact />
         <Footer />
       </div>

@@ -14,12 +14,13 @@ import EngineeringIcon from "@mui/icons-material/Engineering";
 import BoltIcon from "@mui/icons-material/Bolt";
 import HandymanIcon from "@mui/icons-material/Handyman";
 import ContactSupportIcon from "@mui/icons-material/ContactSupport";
+
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState(false);
   const links = [
     { about: <PersonIcon /> },
-    { projects: <EngineeringIcon /> },
     { skills: <BoltIcon /> },
+    { projects: <EngineeringIcon /> },
     { services: <HandymanIcon /> },
     { contact: <ContactSupportIcon /> },
   ];

@@ -22,7 +22,7 @@ const Projects = () => {
             className="project-link"
             href="https://mern-stack-cloth-retails-app.herokuapp.com/"
           >
-            <Card className="project-card" sx={{ width: 345 }}>
+            <Card className="project-card" sx={{ maxWidth: 345 }}>
               <CardActionArea>
                 <CardMedia
                   component="img"
@@ -39,7 +39,11 @@ const Projects = () => {
                   >
                     Mern Stack Ecommerce App
                   </Typography>
-                  <Typography variant="body2" color="grey">
+                  <Typography
+                    style={{ textAlign: "justify" }}
+                    variant="body2"
+                    color="grey"
+                  >
                     Built an Ecommerce Web Application from scratch. Also
                     develop a dashboard for the admin. And much more..
                   </Typography>
@@ -70,7 +74,11 @@ const Projects = () => {
                   >
                     React-Redux-Firebase Ecommerce App
                   </Typography>
-                  <Typography variant="body2" color="grey">
+                  <Typography
+                    style={{ textAlign: "justify" }}
+                    variant="body2"
+                    color="grey"
+                  >
                     Built an Ecommerce Web using React and Redux. For
                     Authentication and Databse Firebase is used as Backend.
                   </Typography>
@@ -101,7 +109,11 @@ const Projects = () => {
                   >
                     Restaurant Landing Page
                   </Typography>
-                  <Typography variant="body2" color="grey">
+                  <Typography
+                    style={{ textAlign: "justify" }}
+                    variant="body2"
+                    color="grey"
+                  >
                     Made a Landing Page using React Components.
                   </Typography>
                 </CardContent>
@@ -131,66 +143,13 @@ const Projects = () => {
                   >
                     Manage Landing Page
                   </Typography>
-                  <Typography variant="body2" color="grey">
+                  <Typography
+                    style={{ textAlign: "justify" }}
+                    variant="body2"
+                    color="grey"
+                  >
                     Took a free challenge form frontendmentor.io to build a
                     exact same landing page as it was designed.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </a>
-        </div>
-        <div data-aos="fade-down">
-          <a className="project-link" href="https://stopwatch-dcfc8.web.app/">
-            <Card className="project-card" sx={{ maxWidth: 345 }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image="./images/stop-watch.png"
-                  alt="green iguana"
-                />
-                <CardContent>
-                  <Typography
-                    style={{ fontWeight: "500" }}
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                  >
-                    Stop Watch
-                  </Typography>
-                  <Typography variant="body2" color="grey">
-                    Built a stop watch using HTML, CSS and Javascript
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </a>
-        </div>
-        <div data-aos="fade-down">
-          <a
-            className="project-link"
-            href="https://quizapplication-e096b.web.app/"
-          >
-            <Card className="project-card" sx={{ maxWidth: 345 }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image="./images/quiz-app.png"
-                  alt="green iguana"
-                />
-                <CardContent>
-                  <Typography
-                    style={{ fontWeight: "500" }}
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                  >
-                    Quiz App
-                  </Typography>
-                  <Typography variant="body2" color="grey">
-                    Built a quiz application using HTML, CSS and Javascript
                   </Typography>
                 </CardContent>
               </CardActionArea>
