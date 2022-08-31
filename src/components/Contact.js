@@ -80,56 +80,54 @@ const Contact = () => {
       >
         Contact Me
       </Typography>
-      <section>
-        <form ref={form} onSubmit={sendEmail}>
-          <Typography variant="h5" style={{ color: "white" }}>
-            Name
-          </Typography>
-          <CssTextField
-            name="user_name"
-            required
-            id="custom-css-outlined-input"
-            inputProps={{
-              style: { color: "white" },
-            }}
-          />
+      <form ref={form} onSubmit={sendEmail}>
+        <Typography variant="h5" style={{ color: "white" }}>
+          Name
+        </Typography>
+        <CssTextField
+          name="user_name"
+          required
+          id="custom-css-outlined-input"
+          inputProps={{
+            style: { color: "white" },
+          }}
+        />
 
-          <Typography variant="h5" style={{ color: "white" }}>
-            Email
-          </Typography>
-          <CssTextField
-            id="outlined-email-input"
-            required
-            name="user_email"
-            type={"email"}
-            inputProps={{ style: { color: "white" } }}
-          />
-          <Typography variant="h5" style={{ color: "white" }}>
-            Message
-          </Typography>
-          <CssTextField
-            id="outlined-multiline-static"
-            multiline
-            name="message"
-            rows={4}
-            inputProps={{ style: { color: "white", margin: "1rem 0" } }}
-          />
-          <Stack spacing={2} sx={{ width: "100%" }}>
-            <button className="btn submit-btn" type="submit">
-              Submit
-            </button>
-            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-              <Alert
-                onClose={handleClose}
-                severity="success"
-                sx={{ width: "100%" }}
-              >
-                Your Message has been sent{" "}
-              </Alert>
-            </Snackbar>
-          </Stack>
-        </form>
-      </section>
+        <Typography variant="h5" style={{ color: "white" }}>
+          Email
+        </Typography>
+        <CssTextField
+          id="outlined-email-input"
+          required
+          name="user_email"
+          type={"email"}
+          inputProps={{ style: { color: "white" } }}
+        />
+        <Typography variant="h5" style={{ color: "white" }}>
+          Message
+        </Typography>
+        <CssTextField
+          id="outlined-multiline-static"
+          multiline
+          name="message"
+          rows={4}
+          inputProps={{ style: { color: "white", margin: "1rem 0" } }}
+        />
+        <Stack spacing={2} sx={{ width: "100%" }}>
+          <button className="btn submit-btn" type="submit">
+            Submit
+          </button>
+          <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+            <Alert
+              onClose={handleClose}
+              severity="success"
+              sx={{ width: "100%" }}
+            >
+              Your Message has been sent{" "}
+            </Alert>
+          </Snackbar>
+        </Stack>
+      </form>
     </div>
   );
 };

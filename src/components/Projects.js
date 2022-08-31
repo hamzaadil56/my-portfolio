@@ -22,7 +22,7 @@ const Projects = () => {
             className="project-link"
             href="https://mern-stack-cloth-retails-app.herokuapp.com/"
           >
-            <Card className="project-card">
+            <Card className="project-card" sx={{ width: 345 }}>
               <CardActionArea>
                 <CardMedia
                   component="img"

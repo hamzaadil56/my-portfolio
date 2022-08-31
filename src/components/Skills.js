@@ -45,6 +45,11 @@ const Skills = () => {
       image: "./images/mongodb.png",
       value: 70,
     },
+    {
+      skill: "Git",
+      image: "./images/Git.png",
+      value: 70,
+    },
   ];
 
   useEffect(() => {
@@ -54,17 +59,18 @@ const Skills = () => {
   return (
     <>
       <div id="skills" className="container ">
-        <div>
-          <Typography
-            style={{ color: "white", textAlign: "center", margin: "2rem auto" }}
-            variant="h3"
-            component="h3"
-            fontWeight="500"
-          >
-            Skills
-          </Typography>
-        </div>
-        <div className=" skills-container">
+        <Typography
+          style={{
+            color: "white",
+            textAlign: "center",
+          }}
+          variant="h3"
+          component="h3"
+          fontWeight="500"
+        >
+          Skills
+        </Typography>
+        <div className="skills-container">
           {skills.map((item, index) => (
             <div className="skill-box-main">
               <img src={item.image} alt="skill" />
